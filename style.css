@@ -4,11 +4,16 @@
     padding: 0;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: #23272a;
+}
+main{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 .container{
     position: relative;
@@ -167,343 +172,46 @@ body{
     transform: translateY(0px);
     transition-delay: 0.75s;
 }
-/* 2 */
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #23272a;
-}
-.container2{
-    position: relative;
-}
-.container2 .card2{
-    position: relative;
-    width: 320px;
-    height: 450px;
-    background: #232323;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.container2 .card2:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #9bdc28;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.container2 .card2:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.container2 .card2:after{
-    content: 'Nike';
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04);
-}
-.container2 .card2 .imgBx2{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-.container2 .card2:hover .imgBx2{
-    top: 0%;
-    transform: translateY(0%);
-    
-}
-.container2 .card2 .imgBx2 img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    width: 270px;
-}
-.container2 .card2 .contentBx2{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-.container2 .card2:hover .contentBx2{
-    height: 210px;
-    
-}
-.container2 .card2 .contentBx2 .h22{
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1;
-    color: #ffffff;   
-}
-.container2 .card2 .contentBx2 .size2,
-.container2 .card2 .contentBx2 .color2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-}
-.container2 .card2:hover .contentBx2 .size2{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
-}
-.container2 .card2:hover .contentBx2 .color2{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.6s;
-}
-.container2 .card2 .contentBx2 .size2 .h32,
-.container2 .card2 .contentBx2 .color2 .h32{
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
-}
-.container2 .card2 .contentBx2 .size2 .span2{
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111111;
-    background: #ffffff;
-    margin: 0 5px;
-    transition: 0.5s;
-    color: #111111;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.container2 .card2 .contentBx2 .size2 .span2:hover{
+
+.container:nth-child(2) .card .contentBx .size span:hover{
     background: #9bdc28;
 }
-.container2 .card2 .contentBx2 .color2 .span2{
-    width: 20px;
-    height: 20px;
-    background: #ff0;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.container2 .card2 .contentBx2 .color2 .span2:nth-child(2){
+
+.container:nth-child(2) .card:before{
     background: #9bdc28;
 }
-.container2 .card2 .contentBx2 .color2 .span2:nth-child(3){
+
+.container:nth-child(3) .card .contentBx .size span:hover{
+    background: #D80004;
+}
+
+.container:nth-child(3) .card:before{
+    background: #D80004;
+}
+
+.container:nth-child(2) .card .contentBx .color span:nth-child(2){
+    background: #9bdc28;
+}
+.container:nth-child(2) .card .contentBx .color span:nth-child(3){
     background: #e10f48;
 }
-.container2 .card2 .contentBx2 .color2 .span2:nth-child(4){
+.container:nth-child(2) .card .contentBx .color span:nth-child(4){
     background: #D80004;
 }
-.container2 .card2 .contentBx2 a{
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ffffff;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-}
-.container2 .card2:hover .contentBx2 a{
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.75s;
-}
-/* 3 */
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #23272a;
-}
-.container3{
-    position: relative;
-}
-.container3 .card3{
-    position: relative;
-    width: 320px;
-    height: 450px;
-    background: #232323;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.container3 .card3:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #D80004;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.container3 .card3:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.container3 .card3:after{
-    content: 'Nike';
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04);
-}
-.container3 .card3 .imgBx3{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-.container3 .card3:hover .imgBx3{
-    top: 0%;
-    transform: translateY(0%);
-    
-}
-.container3 .card3 .imgBx3 img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    width: 270px;
-}
-.container3 .card3 .contentBx3{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-.container3 .card3:hover .contentBx3{
-    height: 210px;
-    
-}
-.container3 .card3 .contentBx3 .h23{
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1;
-    color: #ffffff;   
-}
-.container3 .card3 .contentBx3 .size3,
-.container3 .card3 .contentBx3 .color3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-}
-.container3 .card3:hover .contentBx3 .size3{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
-}
-.container3 .card3:hover .contentBx3 .color3{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.6s;
-}
-.container3 .card3 .contentBx3 .size3 .h33,
-.container3 .card3 .contentBx3 .color3 .h33{
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
-}
-.container3 .card3 .contentBx3 .size3 .span3{
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111111;
-    background: #ffffff;
-    margin: 0 5px;
-    transition: 0.5s;
-    color: #111111;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.container3 .card3 .contentBx3 .size3 .span3:hover{
+
+.container:nth-child(3) .card .contentBx .color span:nth-child(2){
     background: #D80004;
 }
-.container3 .card3 .contentBx3 .color3 .span3{
-    width: 20px;
-    height: 20px;
-    background: #ff0;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.container3 .card3 .contentBx3 .color3 .span3:nth-child(2){
-    background: #D80004;
-}
-.container3 .card3 .contentBx3 .color3 .span3:nth-child(3){
+.container:nth-child(3) .card .contentBx .color span:nth-child(3){
     background: #9bdc28;
 }
-.container3 .card3 .contentBx3 .color3 .span3:nth-child(4){
+.container:nth-child(3) .card .contentBx .color span:nth-child(4){
     background: #e10f48;
 }
-.container3 .card3 .contentBx3 a{
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ffffff;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-}
-.container3 .card3:hover .contentBx3 a{
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.75s;
+
+@media screen and (max-width: 1003px){
+    main{
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+    }
 }
